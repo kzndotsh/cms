@@ -8,19 +8,19 @@ const opacity = keyframes`
 `;
 
 const StyledMessage = styled.div`
-    animation: ${opacity} 1s forwards;
+  animation: ${opacity} 1s forwards;
 `;
 
 export default function Message({ message }) {
-    return (
-        <StyledMessage
-            key={message}
-            id='message'>
-            {message}
-        </StyledMessage>
-    );
+  return (
+    <StyledMessage
+      key={message}
+      id='message'>
+      {message}
+    </StyledMessage>
+  );
 }
 
 Message.propTypes = {
-    message: PT.string.isRequired,
+  message: PT.string.isRequired,
 };

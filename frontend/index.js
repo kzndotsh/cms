@@ -9,8 +9,8 @@ import './styles/reset.css';
 import './styles/styles.css';
 
 render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
-    document.getElementById('root')
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
 );

@@ -6,30 +6,30 @@ import { render } from '@testing-library/react';
 import Spinner from './Spinner';
 
 test('sanity', () => {
-    expect(true).toBe(true);
+  expect(true).toBe(true);
 });
 
 test('Spinner renders correctly when on is true', () => {
-    const { getByText } = render(<Spinner on={true} />);
-    getByText('Please wait...');
+  const { getByText } = render(<Spinner on={true} />);
+  getByText('Please wait...');
 });
 
 test('Spinner renders correctly when on is false', () => {
-    const { queryByText } = render(<Spinner on={false} />);
-    expect(queryByText('Please wait...')).toBeNull();
+  const { queryByText } = render(<Spinner on={false} />);
+  expect(queryByText('Please wait...')).toBeNull();
 });
 
 test('Spinner renders correctly when on is null', () => {
-    const { queryByText } = render(<Spinner on={null} />);
-    expect(queryByText('Please wait...')).toBeNull();
+  const { queryByText } = render(<Spinner on={null} />);
+  expect(queryByText('Please wait...')).toBeNull();
 });
 
 test('Spinner renders correctly when on is undefined', () => {
-    const { queryByText } = render(<Spinner on={undefined} />);
-    expect(queryByText('Please wait...')).toBeNull();
+  const { queryByText } = render(<Spinner on={undefined} />);
+  expect(queryByText('Please wait...')).toBeNull();
 });
 
 test('Spinner renders correctly when on is a string', () => {
-    const { getByText } = render(<Spinner on={'true'} />);
-    getByText('Please wait...');
+  const { getByText } = render(<Spinner on={'true'} />);
+  getByText('Please wait...');
 });
